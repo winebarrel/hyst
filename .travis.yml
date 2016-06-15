@@ -3,4 +3,5 @@ language: go
 go:
   - 1.6
 script:
+  - make dev_dependency
   - make test
