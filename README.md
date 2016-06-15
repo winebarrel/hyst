@@ -46,3 +46,11 @@ $ cat rand.txt | ./hyst -w 200
 600  212  #################################################
 800  193  ############################################
 ```
+
+## Installation
+
+### OS X
+
+```sh
+brew install https://raw.githubusercontent.com/winebarrel/hyst/master/homebrew/hyst.rb
+```
