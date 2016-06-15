@@ -2,6 +2,8 @@
 
 Write a histogram in Terminal.
 
+[![Build Status](https://travis-ci.org/winebarrel/hyst.svg?branch=master)](https://travis-ci.org/winebarrel/hyst)
+
 ## Usage
 
 ```
