@@ -13,6 +13,27 @@ Usage of hyst:
 ```
 
 ```
+$ ruby -e 'puts 1000.times.map { %w(foo bar zoo)[rand(3)] }' > rand.txt
+
+$ head rand.txt
+zoo
+zoo
+bar
+foo
+zoo
+bar
+zoo
+zoo
+bar
+zoo
+
+$ cat rand.txt | hyst
+zoo  351  ##################################################
+foo  341  ################################################
+bar  308  ###########################################
+```
+
+```
 $ ruby -e 'puts 1000.times.map { rand(1000) }' > rand.txt
 
 $ head rand.txt
