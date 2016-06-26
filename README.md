@@ -2,6 +2,12 @@
 
 Write a histogram in Terminal.
 
+## Installation
+
+```
+brew install https://raw.githubusercontent.com/winebarrel/hyst/master/homebrew/hyst.rb
+```
+
 ## Usage
 
 ```
