@@ -1,15 +1,16 @@
-package hyst
+package hyst_test
 
 import (
 	"bytes"
-	"github.com/stretchr/testify/assert"
-	. "hyst"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
+	"github.com/winebarrel/hyst"
 )
 
 func TestCalc(t *testing.T) {
 	assert := assert.New(t)
-	h := &Hyst{Width: 0}
+	h := &hyst.Hyst{Width: 0}
 	expected := map[string]int{"foo": 2, "bar": 1, "zoo": 3}
 	actual, _ := h.Calc([]string{"foo", "foo", "bar", "zoo", "zoo", "zoo"})
 	assert.Equal(expected, actual)
@@ -17,7 +18,7 @@ func TestCalc(t *testing.T) {
 
 func TestCalcWithWidth(t *testing.T) {
 	assert := assert.New(t)
-	h := &Hyst{Width: 3}
+	h := &hyst.Hyst{Width: 3}
 	expected := map[string]int{"0": 2, "3": 4, "6": 3}
 	actual, _ := h.Calc([]string{"0", "2.5", "3", "3.1", "4.5", "5.9", "6", "7.3", "8.6"})
 	assert.Equal(expected, actual)
@@ -25,7 +26,7 @@ func TestCalcWithWidth(t *testing.T) {
 
 func TestCalcWithComplete(t *testing.T) {
 	assert := assert.New(t)
-	h := &Hyst{Width: 3}
+	h := &hyst.Hyst{Width: 3}
 	expected := map[string]int{"3": 0, "6": 0, "9": 0, "15": 0, "18": 0, "0": 2, "12": 4, "21": 3}
 	actual, _ := h.Calc([]string{"0", "2.5", "12", "12.1", "13.5", "14.9", "21", "22.3", "23.6"})
 	assert.Equal(expected, actual)
@@ -34,7 +35,7 @@ func TestCalcWithComplete(t *testing.T) {
 func TestDraw(t *testing.T) {
 	assert := assert.New(t)
 	buf := &bytes.Buffer{}
-	h := &Hyst{Width: 0, Writer: buf}
+	h := &hyst.Hyst{Width: 0, Writer: buf}
 
 	expected := `bar  300  ##################################################
 zoo  200  #################################
@@ -49,7 +50,7 @@ foo  100  ################
 func TestDrawWithWidth(t *testing.T) {
 	assert := assert.New(t)
 	buf := &bytes.Buffer{}
-	h := &Hyst{Width: 3, Writer: buf}
+	h := &hyst.Hyst{Width: 3, Writer: buf}
 
 	expected := ` 3  100  ################
  6  300  ##################################################

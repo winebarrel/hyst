@@ -1,9 +1,10 @@
 package main
 
 import (
-	"hyst"
 	"log"
 	"os"
+
+	"github.com/winebarrel/hyst"
 )
 
 func init() {

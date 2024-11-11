@@ -2,7 +2,7 @@ package hyst
 
 import (
 	"bufio"
-	"io/ioutil"
+	"io"
 	"math"
 	"os"
 	"sort"
@@ -24,7 +24,7 @@ func SummarizeByWidth(nums []float64, width int) []int {
 
 func ReadStdin() (string, error) {
 	reader := bufio.NewReader(os.Stdin)
-	input, err := ioutil.ReadAll(reader)
+	input, err := io.ReadAll(reader)
 
 	if err != nil {
 		return "", err
@@ -121,7 +121,7 @@ func Bar(cnt int, width int, max int) string {
 func MapKeys(m map[string]int) []string {
 	keys := make([]string, 0, len(m))
 
-	for k, _ := range m {
+	for k := range m {
 		keys = append(keys, k)
 	}
 
@@ -166,10 +166,14 @@ func (an AsNum) Less(i, j int) bool {
 	fi, err := strconv.ParseFloat(an[i], 64)
 
 	if err != nil {
-		panic(nil)
+		panic(err)
 	}
 
 	fj, err := strconv.ParseFloat(an[j], 64)
+
+	if err != nil {
+		panic(err)
+	}
 
 	return fi < fj
 }
