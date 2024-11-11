@@ -62,11 +62,3 @@ $ cat gauss.txt | hyst -w 50
  350    2
  400    1
 ```
-
-## Installation
-
-### OS X
-
-```sh
-brew install https://raw.githubusercontent.com/winebarrel/hyst/master/homebrew/hyst.rb
-```
