@@ -1,5 +1,7 @@
 # hyst
 
+[![test](https://github.com/winebarrel/hyst/actions/workflows/test.yml/badge.svg)](https://github.com/winebarrel/hyst/actions/workflows/test.yml)
+
 Write a histogram in Terminal.
 
 ## Usage
