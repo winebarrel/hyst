@@ -1,8 +1,8 @@
 package hyst
 
 import (
+	"errors"
 	"flag"
-	"fmt"
 )
 
 func ParseFlag(h *Hyst) error {
@@ -10,7 +10,7 @@ func ParseFlag(h *Hyst) error {
 	flag.Parse()
 
 	if h.Width < 0 {
-		fmt.Errorf("Width must be >= 0")
+		return errors.New("Width must be >= 0")
 	}
 
 	return nil

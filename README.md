@@ -2,14 +2,6 @@
 
 Write a histogram in Terminal.
 
-[![Build Status](https://travis-ci.org/winebarrel/hyst.svg?branch=master)](https://travis-ci.org/winebarrel/hyst)
-
-## Installation
-
-```
-brew install https://raw.githubusercontent.com/winebarrel/hyst/master/homebrew/hyst.rb
-```
-
 ## Usage
 
 ```
