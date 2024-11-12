@@ -4,6 +4,12 @@
 
 Write a histogram in Terminal.
 
+## Installation
+
+```sh
+go install github.com/winebarrel/hyst/cmd/hyst@latest
+```
+
 ## Usage
 
 ```
