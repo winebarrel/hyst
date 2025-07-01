@@ -10,7 +10,7 @@ func ParseFlag(h *Hyst) error {
 	flag.Parse()
 
 	if h.Width < 0 {
-		return errors.New("Width must be >= 0")
+		return errors.New("width must be >= 0")
 	}
 
 	return nil
